@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: rider-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: rider_db
+
+ride:
+  base-fare: 5.00  # Base fare in USD
+  per-mile-rate: 2.50
