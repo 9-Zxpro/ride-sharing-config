@@ -1,14 +1,30 @@
 server:
-  port: 8084
+  port: 8082
 
 spring:
   application:
     name: captain-service
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: captain_db
+  profiles:
+    active: default
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/captains
+    username: root
+    password: patelji
+
+#  datasource:
+#    url: ${DB_URL:jdbc:postgresql://localhost:5432/mydb}
+#    username: ${DB_USER:admin}
+#    password: ${DB_PASSWORD:admin}
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
 driver:
   verification:
