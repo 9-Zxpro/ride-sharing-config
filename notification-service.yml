@@ -1,0 +1,17 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: notification-service
+
+twilio:
+  account-sid: ${TWILIO_SID:AC123}
+  auth-token: ${TWILIO_TOKEN:xyz789}
+  phone-number: ${TWILIO_PHONE:+1234567890}
+
+smtp:
+  host: smtp.gmail.com
+  port: 587
+  username: ${SMTP_USER:user@gmail.com}
+  password: ${SMTP_PASSWORD:app-specific-password}
