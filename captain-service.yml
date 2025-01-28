@@ -1,0 +1,16 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: captain-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: captain_db
+
+driver:
+  verification:
+    enabled: true
+  max-active-rides: 3
