@@ -1,0 +1,16 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: payment-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/payment_db
+
+stripe:
+  api-key: ${STRIPE_API_KEY:sk_test_12345}  # Use env variables in prod
+  webhook-secret: ${STRIPE_WEBHOOK_SECRET:whsec_12345}
+
+paypal:
+  client-id: ${PAYPAL_CLIENT_ID:abc123}
+  client-secret: ${PAYPAL_CLIENT_SECRET:xyz456}
