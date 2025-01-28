@@ -1,0 +1,12 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: ride-management-service
+  datasource:
+    url: jdbc:cassandra://localhost:9042/ride_db  # Cassandra for time-series data
+
+ride:
+  timeout-minutes: 5  # Time to wait for driver acceptance
+  surge-multiplier: 1.5
