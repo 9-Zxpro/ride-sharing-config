@@ -1,0 +1,20 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: captain-service
+          uri: lb://captain-service
+          predicates:
+            - Path=/api/captains/**
+        - id: rider-service
+          uri: lb://rider-service
+          predicates:
+            - Path=/api/riders/**
+    #TODO: Add JWT filter config here
