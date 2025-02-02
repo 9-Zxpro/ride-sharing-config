@@ -10,11 +10,11 @@ spring:
           enabled: true
       routes:
         - id: captain-service
-          uri: lb://captain-service
+          uri: lb://CAPTAIN-SERVICE
           predicates:
             - Path=/api/captains/**
         - id: rider-service
-          uri: lb://rider-service
+          uri: lb://RIDER-SERVICE
           predicates:
             - Path=/api/riders/**
     #TODO: Add JWT filter config here
