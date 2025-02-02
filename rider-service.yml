@@ -5,6 +5,7 @@ spring:
   application:
     name: rider-service
   datasource:
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/rider-service
     username: postgres
     password: patelji
