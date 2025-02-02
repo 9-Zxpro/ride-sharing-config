@@ -4,25 +4,19 @@ server:
 spring:
   application:
     name: captain-service
-  # datasource:
-  #   driver-class-name: com.mysql.cj.jdbc.Driver
-  #   url: jdbc:mysql://localhost:3306/captains
-  #   username: root
-  #   password: patelji
-
-#  datasource:
-#    url: ${DB_URL:jdbc:postgresql://localhost:5432/mydb}
-#    username: ${DB_USER:admin}
-#    password: ${DB_PASSWORD:admin}
-
-  # jpa:
-  #   show-sql: true
-  #   hibernate:
-  #     ddl-auto: update
-  #   properties:
-  #     hibernate:
-  #       format_sql: true
-  #       dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/rider-service
+    username: postgres
+    password: patelji
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 # driver:
 #   verification:
