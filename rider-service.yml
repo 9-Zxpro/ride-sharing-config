@@ -4,11 +4,6 @@ server:
 spring:
   application:
     name: rider-service
-  # data:
-  #   mongodb:
-  #     host: localhost
-  #     port: 27017
-  #     database: rider_db
   datasource:
     url: jdbc:postgresql://localhost:5432/rider-service
     username: postgres
