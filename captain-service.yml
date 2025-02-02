@@ -6,7 +6,7 @@ spring:
     name: captain-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/rider-service
+    url: jdbc:postgresql://localhost:5432/captain-service
     username: postgres
     password: patelji
   jpa:
