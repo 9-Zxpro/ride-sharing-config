@@ -1,15 +1,34 @@
 server:
-  port: 8083
+  port: 8081
 
 spring:
   application:
     name: rider-service
-  data:
-    mongodb:
-      host: localhost
-      port: 27017
-      database: rider_db
+  # data:
+  #   mongodb:
+  #     host: localhost
+  #     port: 27017
+  #     database: rider_db
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rider-service
+    username: postgres
+    password: patelji
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
 
 ride:
-  base-fare: 5.00  # Base fare in USD
-  per-mile-rate: 2.50
+  base-fare: 5.00 
+  per-kilometer-rate: 2.50
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
