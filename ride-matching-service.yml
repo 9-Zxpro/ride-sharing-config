@@ -1,0 +1,14 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: ride-matching-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+ride-matching:
+  search-radius: 5.0 # kilometers
+  max-drivers-to-consider: 5
