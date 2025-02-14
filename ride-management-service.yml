@@ -24,6 +24,23 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 
+ride-booking-request:
+  exchange: ride.booking.request.exchange
+  queue: ride.booking.request.queue
+  routing-key: ride.booking.request.key
+
+ride-offer:
+  exchange: ride.offer.exchange
+  queue: ride.offer.queue
+  routing-key: ride.offer.key
+
+found-captain:
+  exchange: ride.matching.captain.exchange
+  queue: ride.matching.captain.queue
+  routing-key: ride.matching.captain.key
+
+ride-cache-prefix: "ride:"
+
 ride:
   timeout-seconds: 15  # Time to wait for driver acceptance
   surge-multiplier: 1.5
