@@ -17,4 +17,14 @@ spring:
           uri: lb://RIDER-SERVICE
           predicates:
             - Path=/api/riders/**
+        - id: ride-management-service
+          uri: lb://RIDE-MANAGEMENT-SERVICE
+          predicates:
+            - Path=/api/rides/**
+        # - id: rider-service
+        #   uri: lb://RIDER-SERVICE
+        #   predicates:
+        #     - Path=/api/riders/**
+
+            
     #TODO: Add JWT filter config here
