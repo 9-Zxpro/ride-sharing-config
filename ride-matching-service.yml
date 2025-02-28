@@ -28,4 +28,4 @@ ride-offer:
   queue: ride.offer.queue
   routing-key: ride.offer.key
 
-captain-on-duty-key: captains:available
+captain-on-duty-key: captains:onDuty
