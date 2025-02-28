@@ -13,6 +13,7 @@ spring:
           uri: lb://CAPTAIN-SERVICE
           predicates:
             - Path=/api/captains/**
+            - Path=/api/captain/view/**
         - id: rider-service
           uri: lb://RIDER-SERVICE
           predicates:
