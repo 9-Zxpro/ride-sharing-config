@@ -10,7 +10,7 @@ spring:
     password: guest
 
 ride-matching:
-  search-radius: 5.0 # kilometers
+  search-radius: 25.0 # kilometers
   max-drivers-to-consider: 5
 
 ride-booking-request:
