@@ -33,8 +33,9 @@ ride-offer:
   queue: ride.offer.queue
   routing-key: ride.offer.key
 
+onDuty-captain-key: captains:onDuty
+onRide-captain-key: captains:onRide
 
-  
 # driver:
 #   verification:
 #     enabled: true
